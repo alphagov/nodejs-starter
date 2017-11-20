@@ -33,7 +33,26 @@ npm install --save-dev xo prettier eslint-config-prettier husky lint-staged
     ],
     "ignore": [
       "node_modules/**/*.*"
-    ]
+    ],
+    "rules": {
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "always",
+          "named": "always",
+          "asyncArrow": "always"
+        }
+      ],
+      "quotes": [
+        "error",
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": true
+        }
+      ]
+    },
+    "semicolon": false
   },
 }
 ```
