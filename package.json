@@ -13,8 +13,7 @@
   "keywords": [
     "nodejs",
     "js",
-    "xo",
-    "prettier"
+    "standardjs"
   ],
   "author": "Jon Heslop",
   "license": "MIT",
@@ -22,49 +21,17 @@
     "url": "https://github.com/jonheslop/nodejs-starter/issues"
   },
   "homepage": "https://github.com/jonheslop/nodejs-starter#readme",
-  "xo": {
-    "extends": [
-      "prettier"
-    ],
-    "ignore": [
-      "node_modules/**/*.*"
-    ],
-    "rules": {
-      "space-before-function-paren": [
-        "error",
-        {
-          "anonymous": "always",
-          "named": "always",
-          "asyncArrow": "always"
-        }
-      ],
-      "quotes": [
-        "error",
-        "single",
-        {
-          "avoidEscape": true,
-          "allowTemplateLiterals": true
-        }
-      ]
-    },
-    "semicolon": false
-  },
   "lint-staged": {
     "*.js": [
-      "xo --fix",
-      "prettier --write",
-      "git add"
-    ],
-    "*.scss": [
-      "prettier --write",
+      "standard --fix",
       "git add"
     ]
   },
   "devDependencies": {
-    "eslint-config-prettier": "^2.7.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-promise": "^3.6.0",
     "husky": "^0.14.3",
     "lint-staged": "^5.0.0",
-    "prettier": "^1.8.2",
-    "xo": "^0.18.2"
+    "standard": "^10.0.3"
   }
 }
