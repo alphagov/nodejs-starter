@@ -2,12 +2,12 @@
 
 This repo is just the initial config for a Node.js project.
 
-It uses [Standard] to enforce code quality and formatting and [Husky], a module
+It uses [XO] to enforce code quality and formatting and [Husky], a module
 that helps you run scripts on git hooks.
 
-If you want to see [Standard] in action, clone this repo and edit
+If you want to see [XO] in action, clone this repo and edit
 `index.js` with some style errors e.g. use a `;` or indent badly. When
-you run the commit `standard --fix` will remove the `;` and fix indentation.
+you run the commit `xo --fix` will remove the `;` and fix indentation.
 
 Et voilà! Automagically keep your code consistent across the whole team.
 
@@ -16,7 +16,7 @@ To add this to an existing project, follow these three steps
 
 1. Install the packages
 ```
-npm install --save-dev standard eslint-plugin-import eslint-plugin-promise husky lint-staged
+npm install --save-dev xo husky lint-staged
 ```
 
 2. Add the job that runs pre-commit
@@ -24,7 +24,7 @@ npm install --save-dev standard eslint-plugin-import eslint-plugin-promise husky
 {
   "lint-staged": {
     "*.js": [
-      "standard --fix",
+      "xo --fix",
       "git add"
     ]
   },
@@ -40,9 +40,9 @@ npm install --save-dev standard eslint-plugin-import eslint-plugin-promise husky
 }
 ```
 
-Next time you make a commit [Husky](https://github.com/typicode/husky) will kick in and [Standard] will run.
+Next time you make a commit [Husky](https://github.com/typicode/husky) will kick in and [XO] will run.
 
 👋
 
-[Standard]: https://standardjs.com/
+[XO]: https://github.com/sindresorhus/xo
 [Husky]: https://github.com/typicode/husky
