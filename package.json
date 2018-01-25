@@ -13,7 +13,7 @@
   "keywords": [
     "nodejs",
     "js",
-    "standardjs"
+    "xo"
   ],
   "author": "Jon Heslop",
   "license": "MIT",
@@ -21,17 +21,19 @@
     "url": "https://github.com/jonheslop/nodejs-starter/issues"
   },
   "homepage": "https://github.com/jonheslop/nodejs-starter#readme",
+  "xo": {
+    "space": true,
+    "semicolon": false
+  },
   "lint-staged": {
     "*.js": [
-      "standard --fix",
+      "xo --fix",
       "git add"
     ]
   },
   "devDependencies": {
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-promise": "^3.6.0",
     "husky": "^0.14.3",
     "lint-staged": "^5.0.0",
-    "standard": "^10.0.3"
+    "xo": "^0.18.2"
   }
 }
