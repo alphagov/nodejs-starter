@@ -22,8 +22,7 @@
   },
   "homepage": "https://github.com/jonheslop/nodejs-starter#readme",
   "xo": {
-    "space": true,
-    "semicolon": false
+    "space": true
   },
   "lint-staged": {
     "*.js": [
